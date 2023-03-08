@@ -1,6 +1,5 @@
 ﻿Imports System.Data.SqlClient
 Imports MySql.Data.MySqlClient
-
 Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -10,9 +9,8 @@ Public Class Form3
         Me.Close()
     End Sub
     Private Sub RegisterButton_Click(sender As Object, e As EventArgs) Handles RegisterButton.Click
+        Call Connect_to_DB()
         Try
-            Call Connect_to_DB()
-
             If String.IsNullOrEmpty(userName.Text) OrElse String.IsNullOrEmpty(firstName.Text) OrElse
                String.IsNullOrEmpty(lastName.Text) OrElse String.IsNullOrEmpty(userEmail.Text) OrElse
                String.IsNullOrEmpty(userPasswordRegister1.Text) OrElse String.IsNullOrEmpty(userPasswordRegister2.Text) Then

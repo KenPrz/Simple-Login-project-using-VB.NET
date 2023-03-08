@@ -23,7 +23,6 @@ Module Module1
 
         End Try
     End Sub
-
     Public Sub Disconnect_to_DB()
         myconn.Close()
         myconn.Dispose()
